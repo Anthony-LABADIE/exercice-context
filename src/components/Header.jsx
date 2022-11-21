@@ -1,8 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import UserAvatar from "./UserAvatar";
+import UserContext from "./contexts/UserContext";
 
-export default function Header({ currentUserAvatar, currentUserName }) {
+export default function Header() {
+  const { currentUserAvatar, currentUserName } = React.useContext(UserContext)
   return (
     <header>
       <nav>
